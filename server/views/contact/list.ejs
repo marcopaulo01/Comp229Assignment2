@@ -1,0 +1,56 @@
+<%-include ../partials/header.ejs%>
+<%-include ../partials/main_nav.ejs%>
+
+
+<main class="'container">
+    <div class="row">
+        <div class="'col-md-offset-3 col-md-8">
+            <h1>Contact List</h1>
+            <a href="/contact-list/add" class="btn btn-primary" role="'button"><i class="fas fa-plus-circle"></i>Add a Contact</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header-->
+                <tr>
+                    <th class="text-center col-1">Name</th>
+                    <th class="text-center col-1">Number</th>
+                    <th class="text-center col-1">eMail</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                </tr>
+                
+                <!--Repeat Template Row-->
+                <%for(let count=0; count < ContactList.length; count++){ %>
+                    <tr>
+                        <td class="text-center col-1"><%= ContactList[count].name %></td>
+                        <td class="text-center col-1"><%= ContactList[count].number %></td>
+                        <td class="text-center col-1"><%= ContactList[count].email %></td>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary">
+                            <i class="fas fa-pencil alt"></i> Update</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>Delete</a>
+                        </td>
+                    </tr>
+                <%} %>
+            </table>
+        </div>
+    </div>
+</main>
+<style>
+    html {
+height: 100%;
+margin: 0;
+}
+    body {
+      background: radial-gradient(aqua, white);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      color: black;
+    }
+    </style>
+<%-include ../partials/bottom_nav.ejs%>
+<%-include ../partials/footer.ejs%>   

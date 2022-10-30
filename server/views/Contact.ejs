@@ -1,0 +1,43 @@
+<%-include partials/header.ejs%>
+<%-include partials/main_nav.ejs%>
+  
+
+  
+   <h1><%= title %></h1>
+   <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Doe"><br>
+      <label for="email">Email: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+      <input type="text" id="eamil" name="email" value="john.doe@gmail.com"><br><br>
+      <textarea rows="4" cols="50" name="message">Enter message here</textarea><br><br>
+      <input type="submit" value="Submit">
+   </form><br><br>
+
+   <p>
+      <strong>Marco Garcia</strong><br>
+      941 Progress Ave<br>
+      Scarborough On M1G 3T8<br>
+      <strong>416-999-9999</strong><br>
+      <strong>marco.garcia@gmail.com</strong>
+   </p>
+
+   <style>
+      html {
+  height: 100%;
+  margin: 0;
+}
+      body {
+        background: radial-gradient(aqua, white);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        color: black;
+      }
+      </style>
+
+   <%-include partials/bottom_nav.ejs%>
+<%-include partials/footer.ejs%>   
+
